@@ -64,7 +64,7 @@ This also turns out to be a nice alternative to using switch statements in redux
 export default (state = Immutable.Map, action) => {
   return match(action.type, [
     authenticate => state.merge(action),
-    setToken => state.set('token', 'test')
+    setToken => state.set('token', 'test'),
     _ => state
   ])
 }
