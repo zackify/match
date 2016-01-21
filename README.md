@@ -44,6 +44,8 @@ match(number, {
 
 ```
 
+It is [a LOT slower](http://jsperf.com/match-vs-switch/10) than a switch statement though.
+
 ##Exhaustive Checking
 
 ```js
