@@ -21,6 +21,8 @@ You can get the UMD build from `/umd`, or use it in a script tag from npmcdn:
 
 ##Examples
 
+####[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/9/)
+
 ```js
 
 let message = 'hello'
@@ -41,8 +43,6 @@ match(number, {
 })
 
 ```
-
-[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/9/)
 
 ##Exhaustive Checking
 
