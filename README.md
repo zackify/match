@@ -4,6 +4,21 @@
 
 A basic port of [Rust's match](https://doc.rust-lang.org/book/match.html) function.
 
+##Install
+
+```js
+npm install rust-match --save
+
+import match from 'rust-match'
+```
+
+You can get the UMD build from `/umd`, or use it in a script tag from npmcdn:
+
+```
+<script src="https://npmcdn.com/rust-match/umd/match.min.js"></script>
+```
+
+
 ##Examples
 
 ```js
@@ -11,15 +26,11 @@ A basic port of [Rust's match](https://doc.rust-lang.org/book/match.html) functi
 let message = 'hello'
 let response = match(message, [
   hello => 'the value is hello',
-  goodbye => 'hello to you too!'
+  goodbye => 'hello to you too!',
+  _ => 'something else'
 ])
 
 console.log(response) // prints 'the value is hello'
-
-match('here we go', [
-  awesome => console.log('awesome'),
-  _ => console.log('you said', _)
-])
 
 //numbers and spaces are more verbose
 let number = '26'
@@ -33,6 +44,16 @@ match(number, {
 
 [Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/7/)
 
+##Exhaustive Checking
+
+```js
+match('test', [
+  awesome => console.log('awesome')
+])
+
+//throws: error: non-exhaustive patterns: `_` not covered, just like rust!
+```
+
 ##Usage with Redux
 
 This also turns out to be a nice alternative to using switch statements in redux!
@@ -45,18 +66,4 @@ export default (state = Immutable.Map, action) => {
     _ => state
   ])
 }
-```
-
-##Install
-
-```js
-npm install rust-match --save
-
-import match from 'rust-match'
-```
-
-You can get the UMD build from `/umd`, or use it in a script tag from npmcdn:
-
-```
-<script src="https://npmcdn.com/rust-match/umd/match.min.js"></script>
 ```
