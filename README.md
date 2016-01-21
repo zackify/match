@@ -42,7 +42,7 @@ match(number, {
 
 ```
 
-[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/7/)
+[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/9/)
 
 ##Exhaustive Checking
 
