@@ -7,12 +7,7 @@ module.exports = {
   },
   externals: [
     {
-      'match': {
-        root: 'match',
-        commonjs2: 'match',
-        commonjs: 'match',
-        amd: 'match'
-      }
+      'match': 'match'
     }
   ],
   module: {
