@@ -9,10 +9,12 @@ A basic port of [Rust's match](https://doc.rust-lang.org/book/match.html) functi
 ```js
 
 let message = 'hello'
-match(message, [
-  hello => console.log('the value is hi'),
-  goodbye => console.log('hello to you too!')
+let response = match(message, [
+  hello => 'the value is hello',
+  goodbye => 'hello to you too!'
 ])
+
+console.log(response) // prints 'the value is hello'
 
 match('here we go', [
   awesome => console.log('awesome'),
@@ -23,12 +25,13 @@ match('here we go', [
 let number = '26'
 match(number, {
   5: () => console.log('the value is hi'),
+  'test word': () => console.log('the value is test word'),
   _: (value) => console.log(`you chose ${value}!`)
 })
 
 ```
 
-[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/6/)
+[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/7/)
 
 ##Usage with Redux
 

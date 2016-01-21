@@ -55,4 +55,16 @@ describe('Object with functions', () => {
       },
     })
   })
+
+  it('throws error when nothing matches', () => {
+    try {
+      match('test', {
+        awesome: () => console.log('awesome')
+      })
+    }
+    catch(e) {
+      expect('error: non-exhaustive patterns: `_` not covered').to.be.equal(e)
+    }
+  })
+
 })

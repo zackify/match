@@ -2,20 +2,28 @@
 
 function match(value, checks){
   if( Object.prototype.toString.call(checks) === '[object Array]' ) {
-    let callOnFail = false
+    let callOnFail, called, response
 
-    let response = checks.forEach(check => {
-      let matches = check.toString().match(/([^\s,]+)/g)
-      var match = matches[1]
-      if(/=>/.test(matches[1]) == true) match = matches[0]
+    checks.forEach(check => {
+      let stringified = check.toString()
 
-      let possibleValue = match.toLowerCase().replace(/\(|\)/g, '')
-      if(value == possibleValue) return check(value)
+      if(/=>/.test(stringified) === true) {
+        var possibleValue = stringified.split(/=>/)[0]
+      }
+      else {
+        var possibleValue = stringified.match(/([^\s,]+)/g)[1]
+      }
+
+      possibleValue = possibleValue.replace(/\(|\)/g, '').replace(/ /g,'')
+      if(value == possibleValue) {
+        called = true
+        return response = check(value)
+      }
       if(possibleValue == '_') callOnFail = check
     })
-    if(response) return response
+    if(called) return response
     if(callOnFail) return callOnFail(value)
-    return null
+    throw 'error: non-exhaustive patterns: `_` not covered'
   }
   else {
     if(checks[value]) {

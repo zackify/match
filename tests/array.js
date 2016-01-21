@@ -9,8 +9,8 @@ describe('Array of functions', () => {
         expect('test').to.equal(test)
         done()
       },
-      awesome => console.log('awesome')
-
+      awesome => console.log('awesome'),
+      _ => console.log('boom')
     ])
   })
 
@@ -23,5 +23,24 @@ describe('Array of functions', () => {
       },
       awesome => console.log('awesome')
     ])
+  })
+
+  it('throws error when nothing matches', () => {
+    try {
+      match('test', [
+        awesome => console.log('awesome')
+      ])
+    }
+    catch(e) {
+      expect('error: non-exhaustive patterns: `_` not covered').to.be.equal(e)
+    }
+  })
+
+  it('returns wildcard match', () => {
+    let response = match('test', [
+      awesome => 'you are awesome',
+      _ => 'hey there'
+    ])
+    expect('hey there').to.be.equal(response)
   })
 })
