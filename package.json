@@ -4,7 +4,7 @@
   "description": "a port of rust's match function",
   "main": "match.js",
   "scripts": {
-    "test": "mocha --require babel-core/register test.js",
+    "test": "mocha --require babel-core/register tests/*",
     "build": "babel src/match.js --out-file match.js && npm run build-umd && npm run build-min",
     "build-umd": "NODE_ENV=production webpack src/match.js umd/match.js",
     "build-min": "NODE_ENV=production webpack -p src/match.js umd/match.min.js"
