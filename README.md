@@ -34,7 +34,7 @@ export default (state = Immutable.Map, action) => {
 }
 ```
 
-##Usage
+##Install
 
 ```js
 npm install rust-match --save
