@@ -1,6 +1,6 @@
 {
   "name": "rust-match",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "a port of rust's match function",
   "main": "match.js",
   "scripts": {

@@ -1,7 +1,7 @@
 'use strict'
 
 function match(value, checks){
-  if( Object.prototype.toString.call(checks) === '[object Array]' ) {
+  if(Array.isArray(checks)) {
     let callOnFail, called, response
 
     checks.forEach(check => {
