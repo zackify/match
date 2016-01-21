@@ -7,7 +7,7 @@ A basic port of [Rust's match](https://doc.rust-lang.org/book/match.html) functi
 ```js
 
 let message = 'hello'
-match('hello there', [
+match(message, [
   hello => console.log('the value is hi'),
   goodbye => console.log('hello to you too!')
 ])
