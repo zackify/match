@@ -1,3 +1,5 @@
+![build](https://circleci.com/gh/zackify/match.svg?style=shield&circle-token=443316526a6b5f0ed82f7b64307c6c5914f79ad5)
+
 ##Match
 
 A basic port of [Rust's match](https://doc.rust-lang.org/book/match.html) function.
