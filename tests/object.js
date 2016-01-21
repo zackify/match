@@ -56,7 +56,7 @@ describe('Object with functions', () => {
     })
   })
 
-  it('throws error when nothing matches', () => {
+  it('throws error when nothing matches', done => {
     try {
       match('test', {
         awesome: () => console.log('awesome')
@@ -64,7 +64,9 @@ describe('Object with functions', () => {
     }
     catch(e) {
       expect('error: non-exhaustive patterns: `_` not covered').to.be.equal(e)
+      done()
     }
+    setTimeout(() => expect(false).to.be.equal(true), 500)
   })
 
 })

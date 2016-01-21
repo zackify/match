@@ -21,7 +21,7 @@ You can get the UMD build from `/umd`, or use it in a script tag from npmcdn:
 
 ##Examples
 
-####[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/9/)
+####[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/10/)
 
 ```js
 

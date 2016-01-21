@@ -32,6 +32,7 @@ function match(value, checks){
     else if(checks._) {
       return checks._(value)
     }
+    throw 'error: non-exhaustive patterns: `_` not covered'
   }
 }
 
