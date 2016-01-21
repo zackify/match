@@ -1,4 +1,4 @@
-![build](https://circleci.com/gh/zackify/match.svg?style=shield&circle-token=443316526a6b5f0ed82f7b64307c6c5914f79ad5)
+[![Build Status](https://circleci.com/gh/zackify/match.svg?style=shield&circle-token=443316526a6b5f0ed82f7b64307c6c5914f79ad5)](https://circleci.com/gh/zackify/match)
 
 ##Match
 
