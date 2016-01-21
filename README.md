@@ -13,7 +13,7 @@ match(message, [
 ])
 
 match('here we go', [
-  awesome => console.log('awesome')
+  awesome => console.log('awesome'),
   _ => console.log('you said', _)
 ])
 
@@ -26,7 +26,7 @@ match(number, {
 
 ```
 
-[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/4/)
+[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/6/)
 
 ##Usage with Redux
 
