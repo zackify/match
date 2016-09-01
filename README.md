@@ -12,10 +12,10 @@ npm install rust-match --save
 import match from 'rust-match'
 ```
 
-You can get the UMD build from `/umd`, or use it in a script tag from npmcdn:
+You can get the UMD build from `/umd`, or use it in a script tag from unpkg:
 
 ```
-<script src="https://npmcdn.com/rust-match/umd/match.min.js"></script>
+<script src="https://unpkg.com/rust-match/umd/match.min.js"></script>
 ```
 
 
