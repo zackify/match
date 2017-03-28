@@ -1,10 +1,10 @@
 [![Build Status](https://circleci.com/gh/zackify/match.svg?style=shield&circle-token=443316526a6b5f0ed82f7b64307c6c5914f79ad5)](https://circleci.com/gh/zackify/match)
 
-##Match
+## Match
 
 A basic port of [Rust's match](https://doc.rust-lang.org/book/match.html) function.
 
-##Install
+## Install
 
 ```js
 npm install rust-match --save
@@ -19,9 +19,9 @@ You can get the UMD build from `/umd`, or use it in a script tag from unpkg:
 ```
 
 
-##Examples
+## Examples
 
-####[Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/10/)
+#### [Play around on JSFiddle](https://jsfiddle.net/2ct8d7r9/10/)
 
 ```js
 
@@ -46,7 +46,7 @@ match(number, {
 
 It is [a LOT slower](http://jsperf.com/match-vs-switch/11) than a switch statement though.
 
-##Exhaustive Checking
+## Exhaustive Checking
 
 ```js
 match('test', [
@@ -56,7 +56,7 @@ match('test', [
 //throws: error: non-exhaustive patterns: `_` not covered, just like rust!
 ```
 
-##Usage with Redux
+## Usage with Redux
 
 This also turns out to be a nice alternative to using switch statements in redux!
 
